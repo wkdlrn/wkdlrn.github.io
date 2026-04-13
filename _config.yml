@@ -1,0 +1,153 @@
+# Site
+repository: kkjjgg97/kkjjgg97.github.io
+# favicon: images/favicon.ico
+
+# Content configuration version
+version: 2
+
+# Personal info
+name: 김재구
+title: Backend Engineer
+email: kkjjgg97@gmail.com
+# phone: "010-xxxx-xxxx"
+# website: https://your-website.com
+
+# Dark Mode (true/false/never)
+darkmode: false
+
+# Social links
+github_username: kkjjgg97
+# linkedin_username: your-linkedin-id
+
+# About Section
+# about_profile_image: image.jpg
+about_content: |
+  성능 최적화와 안정적인 인프라 구축에 관심이 많은 백엔드 개발자 김재구입니다.
+
+  JPA N+1 해결, Elasticsearch 도입, 무중단 배포 파이프라인 구축 등 실제 문제를 데이터로 분석하고 기술적 해결책을 찾는 과정을 즐깁니다.
+  단순히 동작하는 코드를 넘어, 유지보수가 쉽고 확장 가능한 구조를 고민하며 팀 전체의 생산성을 높이는 개발 문화를 만들어가고 싶습니다.
+
+content:
+  - title: Projects
+    layout: list
+    content:
+      - layout: left
+        title: 책빵 프로젝트
+        caption: JPA N+1 문제 해결 · API 성능 최적화
+        quote: >
+          리뷰 목록 API 응답 속도 최대 20초 → 1~2초 단축 (90% 감소)
+        description: |
+          JPA N+1 문제로 인해 리뷰 목록 API 응답 속도가 최대 20초까지 지연되던 문제를 진단하고 해결한 프로젝트입니다.
+
+          **사용 기술:** Java, Spring Boot, JPA / Hibernate, Prometheus, Grafana
+
+          - SQL 로그를 분석해 N+1 문제 식별 및 쿼리 흐름 재설계
+          - Fetch Join, @EntityGraph 적용으로 불필요한 쿼리 최소화
+          - Pageable 개선으로 필요한 데이터만 효율적으로 조회
+          - 평균 응답속도 1~2초로 단축 (90% 감소)
+          - DB 서버 CPU 사용률 85% 감소
+          - Prometheus + Grafana 기반 실시간 모니터링 구축
+
+      - layout: left
+        title: 월정액인생 프로젝트
+        caption: 주문 관리 시스템 · 무중단 배포 · 대용량 검색 · 퍼사드 패턴
+        quote: >
+          RPS 50 → 110 (120% 향상), 서비스 가용성 100% 유지
+        description: |
+          정기구독 기반 주문 관리 시스템으로, 인프라 안정화·검색 성능 개선·구조 리팩토링을 직접 주도한 프로젝트입니다.
+
+          **사용 기술:** Java, Spring Boot, Elasticsearch, Logstash, Jenkins, CircleCI, Docker, Kubernetes, MariaDB
+
+          **① 무중단 배포 파이프라인 구축**
+          - CircleCI(Docker 빌드/DockerHub 푸시)와 Jenkins(배포) 역할 분리
+          - Blue-Green 배포 전략 적용으로 서비스 중단 없는 배포 환경 구축
+          - 빌드 부하 분산 및 파이프라인 안정성·확장성 확보
+
+          **② 대용량 검색 시스템 개선 (상품 20,000건 이상)**
+          - Elasticsearch 도입 및 커스텀 분석기 구성 (초성 검색, 영↔한 변환 검색)
+          - Logstash + ConfigMap으로 MariaDB와 1분 주기 실시간 동기화
+          - RPS 50 → 110 (120% 향상), 검색 정확도·속도 향상
+
+          **③ 퍼사드 패턴을 통한 결제 시스템 구조 개선**
+          - 결제·빌링키·구독·정산·이메일 등 6개 서비스를 PaymentFacade로 통합
+          - 트랜잭션을 퍼사드 레벨에서 일관되게 관리
+          - 컨트롤러 코드 약 70% 감소, 서비스 간 결합도 감소, 단위 테스트 용이
+
+      - layout: left
+        title: CI/CD 자동화 배포 시스템
+        caption: 오픈소스 개발자대회 우수작 · Agentica 기반 AI Agent · 대화형 자동 배포
+        quote: >
+          자연어 명령으로 배포 가능한 AI 인터페이스 구현, API 실행 성공률 70% → 88%
+        description: |
+          Agentica 기반으로 자연어 명령을 해석해 실제 배포를 수행하는 대화형 CI/CD 시스템입니다. 오픈소스 개발자대회 우수작으로 선정되었습니다.
+
+          **사용 기술:** Agentica, OpenAI API, Jenkins, Swagger, Docker, Kubernetes
+
+          **① 대화형 자동 배포 (Agentica 기반)**
+          - "새 버전 배포해줘" 같은 자연어 명령을 Swagger와 연동된 실제 배포로 수행
+          - 결과를 한국어 마크다운 형태로 시각화
+          - Swagger 문서 최적화로 명령 인식률 향상
+          - API 실행 성공률 70% → 88% (+18%p)
+
+          **② 빌드 실패 로그 분석 자동화**
+          - 빌드 실패 로그를 OpenAI ChatGPT에 전달, 출력 규칙 프롬프트로 일관된 분석
+          - 문제 요약 → 원인 → 해결 방안 → 재발 방지 → 핵심 로그 형태로 제공
+          - 분석 과정 표준화, 로그 해석 시간 단축
+
+          **③ 공통 모듈 설계 (HttpClientService)**
+          - Jenkins API 호출 시 인증·헤더·오류 처리를 통합한 공통 모듈 설계
+          - 사용 매뉴얼 문서화로 팀 전체 적응 지원
+          - 코드 일관성·개발 효율 향상, 중복 코드 제거
+
+      - layout: left
+        title: 무중단 배포 환경 구축
+        caption: Jenkins + Kubernetes + Blue-Green 배포 전략
+        quote: >
+          서비스 가용성 99.9% 달성, 배포 중 서비스 중단 없음
+        description: |
+          GitHub 웹훅부터 자동 배포, Discord 알림까지 이어지는 완전 자동화 무중단 배포 인프라를 설계하고 구축한 프로젝트입니다.
+
+          **사용 기술:** Jenkins, Docker, Kubernetes, Blue-Green, GitHub Webhook, Discord
+
+          - GitHub Webhook으로 코드 푸시 시 Jenkins 자동 빌드·테스트·Docker 이미지 생성
+          - Kubernetes 클러스터에 자동 배포 구성
+          - Blue-Green Deployment 전략으로 신규 버전 배포 중에도 기존 서비스 무중단 운영
+          - Jenkins Discord 플러그인으로 배포 결과 팀 채널 자동 공유
+          - 트래픽 전환 상태 실시간 시각화 모니터링 스크립트 작성
+          - 서비스 가용성 99.9% 달성
+
+  - title: Skills
+    layout: text
+    content: |
+      현재 업무에 사용 중이거나 공부했던 기술들입니다.
+
+      **Backend**
+      - Java, Spring Boot, JPA / Hibernate, QueryDSL, RESTful API
+
+      **Database & Search**
+      - MySQL, MariaDB, Elasticsearch, Logstash, Redis
+
+      **DevOps**
+      - Jenkins, CircleCI, Docker, Kubernetes
+      - Blue-Green 배포, GitHub Actions
+      - Nginx, Tomcat
+
+      **Monitoring & AI**
+      - Prometheus, Grafana
+      - OpenAI API, Agentica
+
+      **Frontend**
+      - Vue.js, HTML
+
+# Footer
+footer_show_references: false
+
+# Build settings
+remote_theme: sproogen/modern-resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
