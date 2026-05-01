@@ -22,7 +22,7 @@ github_username: kkjjgg97
 # About Section
 # about_profile_image: image.jpg
 about_content: |
-  API 응답 지연, 기존 DB 검색의 기술적 한계, 팀 내 배포 업무 불균형 등 실제 서비스와 협업 과정에서 마주치는 문제를 구조적으로 분석하고,
+  API 응답 지연, 기존 DB 검색의 기술적 한계, 팀 내 배포 업무 불균형 등 프로젝트 진행 과정에서 마주치는 문제를 구조적으로 분석하고,
   JPA N+1 해결, Elasticsearch 도입, AI Agent(Agentica) 기반 대화형 배포 자동화 등 근본적인 해결책을 직접 구현해온 백엔드 개발자 김재구입니다.
 
   응답속도 90% 단축, 검색 성능 120% 향상, API 성공률 18%p 개선 등 측정 가능한 성과로 결과를 검증하며,
