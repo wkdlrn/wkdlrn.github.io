@@ -149,7 +149,7 @@ content:
 
       **DevOps**
       - MySQL, MariaDB, Elasticsearch, Logstash
-      - Jenkins, CircleCI, Docker, Kubernetes
+      - Jenkins, Docker, Kubernetes
       - Blue-Green 배포, Nginx
 
       **Monitoring & AI**
