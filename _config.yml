@@ -119,7 +119,7 @@ content:
   - title: Skills
     layout: text
     content: |
-      현재 업무에 사용 중이거나 공부했던 기술들입니다.
+       공부했던 기술들입니다.
 
       **Backend**
       - Java, Spring Boot, JPA / Hibernate, QueryDSL, RESTful API
