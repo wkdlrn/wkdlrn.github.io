@@ -68,10 +68,11 @@ content:
 
           **사용 기술:** Java, Spring Boot, Elasticsearch, Logstash, Jenkins, CircleCI, Docker, Kubernetes, MariaDB
 
-          **① 무중단 배포 파이프라인 구축**
-          - CircleCI(Docker 빌드/DockerHub 푸시)와 Jenkins(배포) 역할 분리
-          - Blue-Green 배포 전략 적용으로 서비스 중단 없는 배포 환경 구축
-          - 빌드 부하 분산 및 파이프라인 안정성·확장성 확보
+          **① MapStruct 도입을 통한 DTO 변환 구조 개선**
+          - [Problem] 팀원마다 Builder 패턴으로 DTO ↔ Entity 변환을 각자 구현, 로직 불일치·코드 중복 발생
+          - [Analyze] DTO 기반 구조 특성상 변환 코드가 필수적으로 많이 발생, Builder 패턴은 매번 수동 필드 매핑이 필요해 휴먼 에러·유지보수 어려움 초래
+          - [Action] MapStruct 도입 제안 — 어노테이션 기반 자동 생성으로 일관된 매핑 구조 확보, 팀원 설득 후 프로젝트 전체 변환 방식 통일
+          - [Result] DTO-Entity 변환 코드 약 30% 감소, 코드 일관성·가독성 향상, 개발 속도 개선으로 WBS 일정 단축 효과
 
           **② 대용량 검색 시스템 개선 (상품 20,000건 이상)**
           - Elasticsearch 도입 및 커스텀 분석기 구성 (초성 검색, 영↔한 변환 검색)
@@ -84,7 +85,7 @@ content:
           - 컨트롤러 코드 약 70% 감소, 서비스 간 결합도 감소, 단위 테스트 용이
 
       - layout: left
-        title: CI/CD 자동화 배포 시스템
+        title: Pipely 프로젝트
         caption: 2025.06 ~ 2025.11 (5개월) · 3명
         quote: >
           오픈소스 개발자대회 우수작 · Agentica 기반 대화형 자동 배포, API 성공률 70% → 88%
@@ -95,35 +96,60 @@ content:
 
           **① 대화형 자동 배포 (Agentica 기반)**
           - "새 버전 배포해줘" 같은 자연어 명령을 Swagger와 연동된 실제 배포로 수행
-          - 결과를 한국어 마크다운 형태로 시각화
+          - Agentica 프롬프트 커스터마이징으로 AI 응답을 한국어 마크다운 표 형태로 출력, 사용자 경험(UX) 개선
           - Swagger 문서 최적화로 명령 인식률 향상
           - API 실행 성공률 70% → 88% (+18%p)
 
           **② 빌드 실패 로그 분석 자동화**
           - 빌드 실패 로그를 OpenAI ChatGPT에 전달, 출력 규칙 프롬프트로 일관된 분석
-          - 문제 요약 → 원인 → 해결 방안 → 재발 방지 → 핵심 로그 형태로 제공
-          - 분석 과정 표준화, 로그 해석 시간 단축
+          - 문제 요약 → 원인 → 해결 방안 → 재발 방지 → 핵심 로그 형태로 제공 
 
           **③ 공통 모듈 설계 (HttpClientService)**
           - Jenkins API 호출 시 인증·헤더·오류 처리를 통합한 공통 모듈 설계
           - 사용 매뉴얼 문서화로 팀 전체 적응 지원
           - 코드 일관성·개발 효율 향상, 중복 코드 제거
 
+  - title: Education
+    layout: list
+    content:
+      - layout: left
+        title: 대진대학교
+        sub_title: 화학공학전공
+        caption: 2018.03 ~ 2022.02
+        description: |
+          - 학점: 4.14 / 4.5
+
+      - layout: left
+        title: 한성대학교
+        sub_title: 컴퓨터공학부
+        caption: 2022.03 ~ 2025.08
+        description: |
+          - 학점: 3.71 / 4.5
+
+      - layout: left
+        title: 한화시스템 Beyond SW캠프
+        sub_title: 교육 이수 내역
+        caption: 2024.11 ~ 2025.05
+        description: |
+          - Spring Boot Framework 설치 및 환경 구축
+          - MVC 디자인 패턴을 이용한 프로그램 설계 및 개발
+          - RestAPI 개발, 단위 테스트 진행
+          - Ant, Maven 등을 활용한 빌드 및 배포
+          - MSA 아키텍처 기반 서비스 설계 및 구현 경험
+          - Kubernetes(K8s)를 활용한 무중단 배포 실습
+
   - title: Skills
     layout: text
     content: |
-      공부했던 기술들입니다.
+      현재 업무에 사용 중 혹은 공부했던 기술들입니다.
 
       **Backend**
-      - Java, Spring Boot, JPA / Hibernate, QueryDSL, RESTful API
-
-      **Database & Search**
-      - MySQL, MariaDB, Elasticsearch, Logstash, Redis
+      - Java, Spring Boot, JPA / Hibernate, QueryDSL, MapStruct
 
       **DevOps**
+      - MySQL, MariaDB, Elasticsearch, Logstash
       - Jenkins, CircleCI, Docker, Kubernetes
-      - Blue-Green 배포, GitHub Actions
-      - Nginx, Tomcat
+      - Blue-Green 배포, Nginx
 
       **Monitoring & AI**
       - Prometheus, Grafana
