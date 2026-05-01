@@ -112,7 +112,7 @@ content:
   - title: Skills
     layout: text
     content: |
-       공부했던 기술들입니다.
+      공부했던 기술들입니다.
 
       **Backend**
       - Java, Spring Boot, JPA / Hibernate, QueryDSL, RESTful API
