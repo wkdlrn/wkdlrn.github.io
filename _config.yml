@@ -20,7 +20,7 @@ github_username: kkjjgg97
 # linkedin_username: your-linkedin-id
 
 # About Section
-# about_profile_image: image.jpg
+about_profile_image: 증명사진.jpg
 about_content: |
   API 응답 지연, 기존 DB 검색의 기술적 한계, 팀 내 배포 업무 불균형 등 프로젝트 진행 과정에서 마주치는 문제를 구조적으로 분석하고,
   JPA N+1 해결, Elasticsearch 도입, AI Agent(Agentica) 기반 대화형 배포 자동화 등 근본적인 해결책을 직접 구현해온 백엔드 개발자 김재구입니다.
@@ -135,14 +135,13 @@ content:
           - Spring Boot Framework 설치 및 환경 구축
           - MVC 디자인 패턴을 이용한 프로그램 설계 및 개발
           - RestAPI 개발, 단위 테스트 진행
-          - Ant, Maven 등을 활용한 빌드 및 배포
+          - Jenkins, Docker, Kubernetes 등을 활용한 빌드 및 배포
           - MSA 아키텍처 기반 서비스 설계 및 구현 경험
-          - Kubernetes(K8s)를 활용한 무중단 배포 실습
 
   - title: Skills
     layout: text
     content: |
-      현재 업무에 사용 중 혹은 공부했던 기술들입니다.
+      현재 사용 중 혹은 공부했던 기술들입니다.
 
       **Backend**
       - Java, Spring Boot, JPA / Hibernate, QueryDSL, MapStruct
