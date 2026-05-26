@@ -76,7 +76,7 @@ content:
         quote: >
           RPS 50 → 110 (120% 향상) · MapStruct 도입 · 퍼사드 패턴으로 구조 개선
         description: |
-          정기구독 기반 주문 관리 시스템으로, 인프라 안정화·검색 성능 개선·구조 리팩토링을 직접 주도한 프로젝트입니다.
+          정기구독 기반 주문 관리 시스템으로, 인프라 안정화·검색 성능 개선·구조 리팩토링한 프로젝트입니다.
 
           **사용 기술:** Java, Spring Boot, Elasticsearch, Logstash, Jenkins, Docker, Kubernetes, MariaDB
 
