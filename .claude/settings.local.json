@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ruby -e \"require 'yaml'; YAML.load_file\\('_config.yml'\\); puts 'YAML OK'\")",
+      "Bash(python -c \"import yaml; yaml.safe_load\\(open\\('_config.yml', encoding='utf-8'\\).read\\(\\)\\); print\\('YAML OK'\\)\")",
+      "Bash(python -m pip install pyyaml -q)"
+    ]
+  }
+}

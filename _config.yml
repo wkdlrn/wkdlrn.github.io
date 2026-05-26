@@ -1,5 +1,5 @@
 # Site
-repository: kkjjgg97/kkjjgg97.github.io
+repository: wkdlrn/wkdlrn.github.io
 # favicon: images/favicon.ico
 
 # Content configuration version
@@ -74,7 +74,7 @@ content:
             icon: fab fa-github
             url: https://github.com/beyond-sw-camp/be12-fin-Gongcha1-MonthlyLIfe-BE
         quote: >
-          RPS 50 → 110 (120% 향상) · MapStruct 도입 · 퍼사드 패턴으로 구조 개선 주도
+          RPS 50 → 110 (120% 향상) · MapStruct 도입 · 퍼사드 패턴으로 구조 개선
         description: |
           정기구독 기반 주문 관리 시스템으로, 인프라 안정화·검색 성능 개선·구조 리팩토링을 직접 주도한 프로젝트입니다.
 
